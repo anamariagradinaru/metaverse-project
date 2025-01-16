@@ -1,3 +1,8 @@
+/* tailwindcss */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 main {
     box-sizing: border-box;
     margin: 0;
