@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import { Box, Typography, Card, CardContent, CardMedia } from '@mui/material';
+import Image from 'next/image';
 
 const HomeContent = () => {
     return (
@@ -22,6 +23,22 @@ const HomeContent = () => {
                 backgroundColor: 'rgba(0, 0, 0, 0.4)', // Fundal semi-transparent pentru lizibilitate
             }}
         >
+            {/* Logo in top left */}
+            <Box
+                sx={{
+                    position: 'absolute',
+                    top: '20px', // Adjust based on your header height
+                    left: '20px', // Adjust if needed
+                    zIndex: 2, // Ensure the logo stays above other elements
+                }}
+            >
+                <Image
+                    src="/logo.png" // Ensure this is the correct path to your logo
+                    alt="Metaverse Logo"
+                    style={{ width: '120px', height: 'auto' }}
+                />
+            </Box>
+
             {/* Titlu principal */}
             <Typography
                 variant="h4"
