@@ -3,7 +3,7 @@ import { Box, Card, CardContent, Typography } from '@mui/material';
 
 const HomeComponent = () => {
     return (
-        <div>
+        <div id="HomeSection">
             <Box
                 sx={{
                     position: 'relative',

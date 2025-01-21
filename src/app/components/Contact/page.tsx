@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Box, Typography, TextField, Button } from '@mui/material';
+import { Box, Typography, TextField, Button, Avatar } from '@mui/material';
 
 const ContactSection = () => {
     return (
@@ -47,6 +47,20 @@ const ContactSection = () => {
             >
                 Connect With Us in the Metaverse
             </Typography>
+
+            {/* Optional Profile/Logo Photo */}
+            <Avatar
+                src="/profile-photo.jpg" // Replace with your image path
+                alt="Profile Photo"
+                sx={{
+                    width: '100px',
+                    height: '100px',
+                    margin: '0 auto',
+                    marginBottom: '2rem',
+                    borderRadius: '50%', // Makes it round
+                    boxShadow: '0 0 15px rgba(0, 255, 255, 0.8)', // Neon glow around the avatar
+                }}
+            />
 
             {/* Contact Form */}
             <Box

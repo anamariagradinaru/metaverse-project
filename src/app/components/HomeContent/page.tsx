@@ -8,22 +8,21 @@ const HomeContent = () => {
         <Box
             sx={{
                 position: 'absolute',
-                top: '80px', // Asigură-te că începe după antet (ajustează această valoare dacă este necesar)
+                top: '80px',
                 left: 0,
                 width: '100%',
-                height: '100%', // Înălțimea completă a viewport-ului
+                height: '100%',
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
                 justifyContent: 'center',
                 textAlign: 'center',
                 padding: '2rem',
-                zIndex: 1, // Asigură-te că este deasupra fundalului
-                backdropFilter: 'blur(8px)', // Efect de Glassmorphism
-                backgroundColor: 'rgba(0, 0, 0, 0.4)', // Fundal semi-transparent pentru lizibilitate
+                zIndex: 1,
+                backdropFilter: 'blur(8px)',
+                backgroundColor: 'rgba(0, 0, 0, 0.4)',
             }}
         >
-            {/* Logo in top left */}
             <Box
                 sx={{
                     position: 'absolute',
@@ -99,7 +98,7 @@ const HomeContent = () => {
                     <CardMedia
                         component="img"
                         height="140"
-                        image="/metaverse-card1.jpg" // Înlocuiește cu propria imagine
+                        image="/metaverse-card1.jpg"
                         alt="Explorare Metavers"
                     />
                     <CardContent>

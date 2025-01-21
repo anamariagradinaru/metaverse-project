@@ -100,9 +100,13 @@ const TeamComponent = () => {
                                     style={{
                                         position: 'relative',
                                         height: '180px',
-                                        width: '100%',
+                                        width: '180px', // Make it a square
                                         overflow: 'hidden',
-                                        borderRadius: '15px 15px 0 0',
+                                        borderRadius: '50%', // Makes it round
+                                        margin: '0 auto',
+                                        marginTop: '15px',
+                                        boxShadow:
+                                            '0 0 15px rgba(0, 212, 255, 0.5)', // Neon glow
                                     }}
                                 >
                                     <div
@@ -118,7 +122,7 @@ const TeamComponent = () => {
                                             transition:
                                                 'transform 0.5s ease-in-out',
                                             transform: 'rotate(0deg)',
-                                            borderRadius: '15px 15px 0 0',
+                                            borderRadius: '50%', // Round on hover
                                         }}
                                         className="team-photo-hover"
                                     />
@@ -135,7 +139,7 @@ const TeamComponent = () => {
                                             transition:
                                                 'transform 0.5s ease-in-out',
                                             transform: 'rotate(90deg)',
-                                            borderRadius: '15px 15px 0 0',
+                                            borderRadius: '50%', // Round on hover
                                         }}
                                         className="team-photo-back"
                                     />
