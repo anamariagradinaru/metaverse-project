@@ -1,15 +1,14 @@
 'use client';
 import { Box, Card, CardContent, Typography, Grid } from '@mui/material';
 
-// Sample team member data (with your image)
 const teamMembers = [
     {
         name: 'John Doe',
         email: 'john.doe@example.com',
         address: '123 Metaverse St, City 001',
         phone: '+1234567890',
-        photo: 'team-1.jpg', // Your profile photo
-        photoBack: '/images/team-1.jpg', // Another photo for the hover effect
+        photo: 'team-1.jpg',
+        photoBack: '/images/team-1.jpg',
     },
     {
         name: 'Jane Smith',
@@ -42,71 +41,72 @@ const TeamComponent = () => {
         <Box
             sx={{
                 position: 'relative',
-                height: '100vh',
-                backgroundImage: 'url(/bg-team.jpg)', // Add your background image
+                minHeight: '100vh',
+                backgroundImage: 'url(/bg-team.jpg)',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundAttachment: 'fixed',
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
-                backdropFilter: 'blur(10px)', // Frosted glass effect
-                WebkitBackdropFilter: 'blur(10px)', // Safari support
+                padding: '20px',
                 color: '#fff',
             }}
         >
             <Box
                 sx={{
                     textAlign: 'center',
-                    maxWidth: '90%',
-                    marginBottom: '50px',
+                    maxWidth: '100%',
+                    marginBottom: '40px',
                 }}
             >
                 <Typography
-                    variant="h2"
+                    variant="h3"
                     sx={{
                         fontWeight: 'bold',
                         fontFamily: 'Roboto, sans-serif',
                         textShadow: '0 0 15px rgba(255, 255, 255, 0.8)',
-                        fontSize: '3rem',
-                        marginBottom: '40px',
+                        fontSize: { xs: '2rem', sm: '3rem' },
+                        marginBottom: '30px',
                     }}
                 >
                     Meet the Metaverse Team
                 </Typography>
 
-                {/* Team Cards */}
-                <Grid container spacing={4} justifyContent="center">
+                <Grid
+                    container
+                    spacing={{ xs: 2, sm: 4 }}
+                    justifyContent="center"
+                >
                     {teamMembers.map((member, index) => (
                         <Grid item xs={12} sm={6} md={3} key={index}>
                             <Card
                                 sx={{
                                     position: 'relative',
-                                    background: 'rgba(255, 255, 255, 0.1)', // Slightly translucent background
+                                    background: 'rgba(255, 255, 255, 0.1)',
                                     borderRadius: '15px',
                                     boxShadow:
                                         '0 8px 15px rgba(0, 212, 255, 0.5)',
-                                    backdropFilter: 'blur(15px)', // Frosted glass effect
+                                    backdropFilter: 'blur(15px)',
                                     '&:hover': {
                                         boxShadow:
-                                            '0 0 30px rgba(0, 212, 255, 0.7)', // Glowing effect on hover
+                                            '0 0 30px rgba(0, 212, 255, 0.7)',
                                     },
                                     maxWidth: '270px',
                                     margin: '0 auto',
                                 }}
                             >
-                                {/* Image Hover Effect */}
                                 <div
                                     style={{
                                         position: 'relative',
-                                        height: '180px',
-                                        width: '180px', // Make it a square
+                                        height: '150px',
+                                        width: '150px',
                                         overflow: 'hidden',
-                                        borderRadius: '50%', // Makes it round
+                                        borderRadius: '50%',
                                         margin: '0 auto',
                                         marginTop: '15px',
                                         boxShadow:
-                                            '0 0 15px rgba(0, 212, 255, 0.5)', // Neon glow
+                                            '0 0 15px rgba(0, 212, 255, 0.5)',
                                     }}
                                 >
                                     <div
@@ -122,7 +122,7 @@ const TeamComponent = () => {
                                             transition:
                                                 'transform 0.5s ease-in-out',
                                             transform: 'rotate(0deg)',
-                                            borderRadius: '50%', // Round on hover
+                                            borderRadius: '50%',
                                         }}
                                         className="team-photo-hover"
                                     />
@@ -139,13 +139,12 @@ const TeamComponent = () => {
                                             transition:
                                                 'transform 0.5s ease-in-out',
                                             transform: 'rotate(90deg)',
-                                            borderRadius: '50%', // Round on hover
+                                            borderRadius: '50%',
                                         }}
                                         className="team-photo-back"
                                     />
                                 </div>
 
-                                {/* Team Member Details */}
                                 <CardContent
                                     sx={{
                                         paddingTop: '15px',
@@ -157,7 +156,7 @@ const TeamComponent = () => {
                                         sx={{
                                             color: '#fff',
                                             fontWeight: 'bold',
-                                            fontSize: '1.1rem',
+                                            fontSize: '1rem',
                                         }}
                                     >
                                         {member.name}
@@ -166,7 +165,7 @@ const TeamComponent = () => {
                                         variant="body2"
                                         sx={{
                                             color: '#ccc',
-                                            fontSize: '0.9rem',
+                                            fontSize: '0.8rem',
                                         }}
                                     >
                                         <strong>Email:</strong> {member.email}
@@ -175,7 +174,7 @@ const TeamComponent = () => {
                                         variant="body2"
                                         sx={{
                                             color: '#ccc',
-                                            fontSize: '0.9rem',
+                                            fontSize: '0.8rem',
                                         }}
                                     >
                                         <strong>Address:</strong>{' '}
@@ -185,7 +184,7 @@ const TeamComponent = () => {
                                         variant="body2"
                                         sx={{
                                             color: '#ccc',
-                                            fontSize: '0.9rem',
+                                            fontSize: '0.8rem',
                                         }}
                                     >
                                         <strong>Phone:</strong> {member.phone}
@@ -197,7 +196,6 @@ const TeamComponent = () => {
                 </Grid>
             </Box>
 
-            {/* Hover Effect CSS */}
             <style jsx>{`
                 .team-photo-hover:hover {
                     transform: rotate(90deg);

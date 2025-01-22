@@ -17,7 +17,7 @@ const HomeContent = () => {
                 alignItems: 'center',
                 justifyContent: 'center',
                 textAlign: 'center',
-                padding: '2rem',
+                padding: { xs: '1.5rem', sm: '2rem' },
                 zIndex: 1,
                 backdropFilter: 'blur(8px)',
                 backgroundColor: 'rgba(0, 0, 0, 0.4)',
@@ -26,26 +26,25 @@ const HomeContent = () => {
             <Box
                 sx={{
                     position: 'absolute',
-                    top: '20px', // Adjust based on your header height
-                    left: '20px', // Adjust if needed
-                    zIndex: 2, // Ensure the logo stays above other elements
+                    top: '20px',
+                    left: '20px',
+                    zIndex: 2,
                 }}
             >
                 <Image
-                    src="/logo.png" // Ensure this is the correct path to your logo
+                    src="/logo.png"
                     alt="Metaverse Logo"
                     style={{ width: '120px', height: 'auto' }}
                 />
             </Box>
 
-            {/* Titlu principal */}
             <Typography
                 variant="h4"
                 sx={{
-                    color: '#00d4ff', // Albastru neon pentru titlu
-                    fontSize: '2.5rem',
+                    color: '#00d4ff',
+                    fontSize: { xs: '2rem', sm: '2.5rem' },
                     fontWeight: 'bold',
-                    textShadow: '0px 0px 20px rgba(0, 224, 255, 1)', // Efect de strălucire
+                    textShadow: '0px 0px 20px rgba(0, 224, 255, 1)',
                     marginBottom: '2rem',
                     marginTop: '4rem',
                 }}
@@ -57,10 +56,11 @@ const HomeContent = () => {
                 variant="body1"
                 sx={{
                     color: '#ffffff',
-                    fontSize: '1.2rem',
+                    fontSize: { xs: '1rem', sm: '1.2rem' },
                     lineHeight: 1.6,
                     maxWidth: '800px',
                     marginBottom: '3rem',
+                    paddingX: { xs: '1rem', sm: '0' },
                 }}
             >
                 Metaversul este un univers virtual interconectat în care
@@ -69,29 +69,28 @@ const HomeContent = () => {
                 blockchain-ul pentru a crea o lume digitală captivantă.
             </Typography>
 
-            {/* Carduri pentru explicația Metaversului */}
             <Box
                 sx={{
                     display: 'flex',
                     justifyContent: 'center',
                     gap: '2rem',
-                    zIndex: 1, // Asigură-te că este deasupra fundalului
+                    zIndex: 1,
                     marginBottom: '4rem',
                     flexWrap: 'wrap',
+                    paddingX: '1rem',
                 }}
             >
-                {/* Card 1 */}
                 <Card
                     sx={{
-                        maxWidth: 345,
-                        backgroundColor: 'rgba(0, 0, 0, 0.7)', // Negru semi-transparent
+                        maxWidth: '345px',
+                        backgroundColor: 'rgba(0, 0, 0, 0.7)',
                         borderRadius: '15px',
                         boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.6)',
                         textAlign: 'center',
                         transition: 'transform 0.3s ease, box-shadow 0.3s ease',
                         '&:hover': {
                             transform: 'scale(1.05)',
-                            boxShadow: '0px 8px 20px rgba(0, 255, 255, 0.3)', // Efect de strălucire la hover
+                            boxShadow: '0px 8px 20px rgba(0, 255, 255, 0.3)',
                         },
                     }}
                 >
@@ -118,7 +117,7 @@ const HomeContent = () => {
                 {/* Card 2 */}
                 <Card
                     sx={{
-                        maxWidth: 345,
+                        maxWidth: '345px',
                         backgroundColor: 'rgba(0, 0, 0, 0.7)',
                         borderRadius: '15px',
                         boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.6)',
